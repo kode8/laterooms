@@ -20,8 +20,7 @@ const config = {
     alias: {
       Api: path.resolve(__dirname, './src/Api'),
       Components: path.resolve(__dirname, './src/Components'),
-      Containers: path.resolve(__dirname, './src/Components/Containers'),
-      Scss: path.resolve(__dirname, './src/Scss')
+      Containers: path.resolve(__dirname, './src/Components/Containers')
     },
   },
   module: {
@@ -64,7 +63,7 @@ const config = {
         }, {
           loader: 'sass-loader', // compiles Sass to CSS
           options: {
-            includePaths: `${__dirname  }/src/Scss`,
+            includePaths: ['./src/Scss'],
           },
         }],
       },
