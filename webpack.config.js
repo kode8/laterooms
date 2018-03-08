@@ -20,7 +20,8 @@ const config = {
     alias: {
       Api: path.resolve(__dirname, './src/Api'),
       Components: path.resolve(__dirname, './src/Components'),
-      Containers: path.resolve(__dirname, './src/Components/Containers')
+      Containers: path.resolve(__dirname, './src/Components/Containers'),
+      Scss: path.resolve(__dirname, './src/Scss'),
     },
   },
   module: {
