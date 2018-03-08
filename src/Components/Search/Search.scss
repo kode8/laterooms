@@ -1,0 +1,13 @@
+.search-component {
+
+    $block: &;
+    background-color: $white;
+    
+}
+
+// Remove on dropping support */
+.lte-10 {
+    .search-component {
+       // LTE10 tweaks here
+    }
+}
