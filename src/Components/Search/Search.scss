@@ -52,12 +52,13 @@
             text-transform: capitalize;
             transition: all .15s;
 
-            &:focus {
+            &--focus, &:focus {
                 outline: none;
                 border-color: $persian-indigo;
             }
 
-            &:focus ~ label {
+            &--focus ~ label,
+            &:focus ~ label,  {
                 opacity: .8;
                 position: absolute;
                 transform: scale(.8,.8) translate3d(-15px,-25px,0);
