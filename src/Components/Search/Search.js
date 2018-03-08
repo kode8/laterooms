@@ -14,8 +14,8 @@ class Search extends Component {
       <div className="search-component">
         <form method="post" action="/fallback" className="search-component__form">
           <div className="search-component__form-control">
-            <label htmlFor="search" className="search-component__form-control-label">Search</label>
             <input type="input" className="search-component__form-control-input" />
+            <label htmlFor="search" className="search-component__form-control-label">Search</label>
             <button type="submit" className="search-component__form-control-btn" value="search">Submit</button>
           </div>
         </form> 
