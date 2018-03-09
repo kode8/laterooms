@@ -8,12 +8,12 @@ import './Search.scss'
 
 class Search extends Component {
 
-  constructor() {
+  constructor(props) {
     super();
 
     this.state = {
       value: '',
-      searchResults : ''
+      searchData : props.searchData
     }
 
     this.handleChange = this.handleChange.bind(this);
@@ -29,6 +29,8 @@ class Search extends Component {
  
   render() {
 
+    const { searchData } = this.state;
+
     const focusClass = (this.state.value !== "") 
       ? 'search-component__form-control-input search-component__form-control-input--focus' 
       : 'search-component__form-control-input';
@@ -42,7 +44,7 @@ class Search extends Component {
             <button type="submit" className="search-component__form-control-btn" value="search">Submit</button>
           </div>
         </form> 
-        <SearchResults results={ this.state } />
+        <SearchResults searchData={ searchData } />
       </div>
     );
   }
