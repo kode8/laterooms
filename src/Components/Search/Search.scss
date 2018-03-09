@@ -70,6 +70,8 @@
             border: 1px solid $form-input-border-color;
             padding: $form-input-padding;
             min-width: 80px;
+            display: none;
+            
             .no-js & {
                 display: block;
             }
