@@ -1,0 +1,30 @@
+@import 'colors';
+
+.result-card {
+
+    $block: &;
+    display: flex;
+    width: 100%;
+    border: 1px solid red; 
+    border-radius: 5px;
+    margin: 20px auto;
+
+
+    &__figure {
+        display: flex;
+        flex-direction: row;
+        margin: 15px;
+    }
+
+    &__caption {
+        margin: 15px;
+    }
+
+}
+
+// Remove on dropping support */
+.lte-10 {
+    .result-results {
+       // LTE10 tweaks here
+    }
+}
