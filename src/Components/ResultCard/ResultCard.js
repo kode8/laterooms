@@ -1,6 +1,7 @@
-import React from 'react';
+import React from 'react'
 
 import './ResultCard.scss'
+import './ResultCardCta.scss'
 
 const ResultCard = (props) => {
     const { Name, StarRating, Facilities } = props.result
