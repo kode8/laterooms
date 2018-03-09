@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import Search from 'Components/Search/Search'
 import PageResults from 'Components/SearchResults/PageResults/PageResults'
 
+import './App.scss'
+
 class App extends Component {
 
 
@@ -35,7 +37,7 @@ class App extends Component {
     ];
 
     return (
-      <div>
+      <div className="app">
         <Search searchData={ searchData } />
         <PageResults searchData={ searchData } />
       </div>

@@ -1,0 +1,11 @@
+.app {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+// Remove on dropping support */
+.lte-10 {
+    .app{
+       // LTE10 tweaks here
+    }
+}

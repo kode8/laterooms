@@ -11,8 +11,6 @@
     $form-font-size: 15px;
 
     // root
-    max-width: 400px;
-    margin: 0 auto;
     background-color: $white;
 
     &__form {
@@ -71,7 +69,7 @@
             padding: $form-input-padding;
             min-width: 80px;
             display: none;
-            
+
             .no-js & {
                 display: block;
             }
