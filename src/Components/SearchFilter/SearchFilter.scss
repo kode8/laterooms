@@ -1,0 +1,19 @@
+@import 'colors';
+
+.search-filter {
+
+    $block: &;
+    display: flex;
+
+    .no-flex & {
+        // fallbacks here
+    }
+
+}
+
+// Remove on dropping support */
+.lte-10 {
+    .search-filter {
+       // LTE10 tweaks here
+    }
+}

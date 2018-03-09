@@ -5,7 +5,6 @@ import './SearchResults.scss'
 const SearchResults = (props) => {
 
     return (
-        
         <ul className="search-results">
         { 
             props.searchData.map( (item, index) => {
