@@ -1,10 +1,14 @@
 import React, { Component } from 'react'
 import Search from 'Components/Search/Search'
+import PageResults from 'Components/SearchResults/PageResults/PageResults'
 
 class App extends Component {
   render() {
     return (
-      <Search />
+      <div>
+        <Search />
+        <PageResults />
+      </div>
     );
   }
 }

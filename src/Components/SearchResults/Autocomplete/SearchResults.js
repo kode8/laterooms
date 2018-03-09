@@ -8,6 +8,7 @@ const SearchResults = (props) => {
         {
             "Name": "The Hilton - Manchester",
             "StarRating": 5,
+            "Price": "200",
             "Facilities": [
                 "car park",
                 "pool"
@@ -16,6 +17,7 @@ const SearchResults = (props) => {
         {
             "Name": "The Rosell - Leeds",
             "StarRating": 3,
+            "Price": "245",
             "Facilities": [
                 "car park",
                 "gym"
@@ -24,6 +26,7 @@ const SearchResults = (props) => {
         {
             "Name": "Ibis - London",
             "StarRating": 3,
+            "Price": "140",
             "Facilities": []
         }
     ];

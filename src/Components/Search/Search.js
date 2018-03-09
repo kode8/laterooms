@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 // Components
-import SearchResults from 'Components/SearchResults/SearchResults';
+import SearchResults from 'Components/SearchResults/Autocomplete/SearchResults';
 
 // Assets
 import './Search.scss'
@@ -12,7 +12,8 @@ class Search extends Component {
     super();
 
     this.state = {
-      value: ''
+      value: '',
+      searchResults : ''
     }
 
     this.handleChange = this.handleChange.bind(this);
@@ -20,7 +21,9 @@ class Search extends Component {
 
   handleChange(e) {
     this.setState(
-      { value: e.target.value }
+      { 
+        value: e.target.value 
+      }
     );
   }
  
@@ -39,7 +42,7 @@ class Search extends Component {
             <button type="submit" className="search-component__form-control-btn" value="search">Submit</button>
           </div>
         </form> 
-        <SearchResults />
+        <SearchResults results={ this.state } />
       </div>
     );
   }

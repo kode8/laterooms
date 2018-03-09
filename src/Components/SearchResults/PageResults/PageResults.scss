@@ -1,0 +1,17 @@
+@import 'colors';
+
+.page-results {
+
+    $block: &;
+
+    display: block;
+    width: 100%;
+
+}
+
+// Remove on dropping support */
+.lte-10 {
+    .search-results {
+       // LTE10 tweaks here
+    }
+}
