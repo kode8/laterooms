@@ -1,0 +1,16 @@
+@import 'colors';
+
+.result-card-cta {
+
+    $block: &;
+    display: flex;
+  
+
+}
+
+// Remove on dropping support */
+.lte-10 {
+    .result-card-cta {
+       // LTE10 tweaks here
+    }
+}
