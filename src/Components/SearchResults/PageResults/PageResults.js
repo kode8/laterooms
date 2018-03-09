@@ -11,16 +11,27 @@ class PageResults extends Component {
 
     constructor(props) {
       super();
-  
+
       this.state = {
-        searchData : props.searchData
+        searchData: props.searchData
       }
   
       this.onFilterChange = this.onFilterChange.bind(this);
     }
 
-    onFilterChange() {
-        console.log('Here');
+    onFilterChange(filterCategory) {
+        
+        let filteredData = this.props.searchData;
+
+        if(filterCategory!=='all') {
+            filteredData = this.props.searchData.filter( (data) => {
+                return data.Facilities.includes(filterCategory);
+            });
+        } 
+
+        this.setState({
+            searchData: filteredData
+        });
     }
 
     render() {
