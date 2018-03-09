@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 
+// Components
+import SearchResults from 'Components/SearchResults/SearchResults';
+
 // Assets
 import './Search.scss'
 
@@ -36,6 +39,7 @@ class Search extends Component {
             <button type="submit" className="search-component__form-control-btn" value="search">Submit</button>
           </div>
         </form> 
+        <SearchResults />
       </div>
     );
   }
