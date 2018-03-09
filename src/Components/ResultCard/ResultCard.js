@@ -11,7 +11,16 @@ const ResultCard = (props) => {
                 <figcaption  className="result-card__figure-caption">
                     <h2 className="result-card__figure-title">{ Name }</h2>
                     <ul className="result-card__figure-desc">
-                        <li className="result-card__figure-desc-rating" data-stars={ StarRating }><span>5 Star Rating</span></li>
+                        <li className="result-card__figure-desc-rating" >
+                            <span>{ StarRating } Star Rating</span>
+                            <ul className="result-card__figure-desc-stars" data-stars={ StarRating } aria-hidden="true" aria-role="presentation" >
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </li>
                         <li className="result-card__figure-desc-reviews"><span>105 guest reviews</span></li>
                     </ul>
                 </figcaption>

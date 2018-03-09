@@ -5,15 +5,51 @@
     $block: &;
     display: flex;
     width: 100%;
-    border: 1px solid red; 
+    border: 1px solid $persian-indigo; 
     border-radius: 5px;
     margin: 20px auto;
-
 
     &__figure {
         display: flex;
         flex-direction: row;
         margin: 15px;
+    }
+
+    &__figure-title {
+        color: $persian-indigo;
+    }
+
+    &__figure-desc {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__figure-desc-stars {
+        list-style: none;
+        margin: 10px 0;
+        padding: 0;
+
+        li {
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            margin-right: 10px;
+            border-radius: 3px;
+            background-color: $bright-sun;
+        }
+
+        @for $i from 1 through 5 {
+            &[data-stars='#{$i}'] li:nth-child(n+#{$i+1}) {
+                background-color: rgba($bright-sun, .5);
+            }
+        }
+    }
+
+    &__figure--rating {
+        list-style: none;
+        margin: 0;
+        padding: 0;
     }
 
     &__caption {
