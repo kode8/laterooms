@@ -12,6 +12,7 @@
     &__figure {
         display: flex;
         flex-direction: row;
+        flex-grow: 1;
         margin: 15px;
 
         .no-flex & {

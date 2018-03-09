@@ -4,8 +4,38 @@
 
     $block: &;
     display: flex;
-  
+    flex-direction: column;
+    margin: 20px;
+    width: 150px;
+    text-align: center;
+    color: $persian-indigo;
+    justify-content: space-between;
 
+    &__nights {
+
+    }
+
+    &__price {
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    &__btn {
+        border-radius: 5px;
+        padding: 10px;
+        background-color: $persian-indigo;
+        color: $white;
+        text-decoration: none;
+
+        &:hover {
+            background-color: darken($persian-indigo, 5%);
+        }
+    }
+
+    .no-flex & {
+        // fallbacks here
+    }
+  
 }
 
 // Remove on dropping support */
