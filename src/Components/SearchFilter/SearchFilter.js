@@ -27,6 +27,14 @@ const SearchFilter = (props) => {
                     Clear
                 </a>
             </li>
+            <li className="search-filter__item">&nbsp;&nbsp;&nbsp;</li>
+            <li className="search-filter__item">Order Star Rating: 
+                <select className="search-filter__order" onChange={ props.onOrderChange } > 
+                    <option value="" disabled>Order</option>
+                    <option value="desc">High Rating</option>
+                    <option value="asc">Low Rating</option>
+                </select>
+            </li>
         </ul>
     );
 }

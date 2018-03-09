@@ -31,6 +31,15 @@
             background-color: darken($persian-indigo, 5%);
         }
     }
+
+    &__order {
+        font-size: 14px;
+        margin: 0 5px;
+        padding: 5px;
+        border: 1px solid grey;
+        height: 30px;
+        border-radius: 0;
+    }
     
     .no-flex & {
         // fallbacks here

@@ -13,31 +13,53 @@ class PageResults extends Component {
       super();
 
       this.state = {
-        searchData: props.searchData
+        searchData: props.searchData,
+        order: 'desc'
       }
-  
+      
+      this.onOrderChange = this.onOrderChange.bind(this);
       this.onFilterChange = this.onFilterChange.bind(this);
     }
 
     onFilterChange(filterCategory) {
         
-        let filteredData = this.props.searchData;
+        let filteredData = this.props.searchData // reset
 
         if(filterCategory!=='all') {
             filteredData = this.props.searchData.filter( (data) => {
-                return data.Facilities.includes(filterCategory);
+                return data.Facilities.includes(filterCategory)
             });
         } 
 
         this.setState({
             searchData: filteredData
-        });
+        })
     }
+
+    onOrderChange(e) {
+        this.reorder(e.target.value);
+    }
+
+    reorder(order) {
+
+        let orderedSearchData = this.state.searchData.sort((a, b) => {
+            if(order === 'asc') {
+                return a.StarRating - b.StarRating
+            } else { 
+                return b.StarRating - a.StarRating
+            } 
+        })
+
+        this.setState({
+            searchData: orderedSearchData
+        })
+    }
+
 
     render() {
         return(
             <div>
-                <SearchFilter onFilterChange={ this.onFilterChange } />
+                <SearchFilter onFilterChange={ this.onFilterChange } onOrderChange={ this.onOrderChange } />
                 { 
                     this.state.searchData.map( (item, index) => {
                         return (
