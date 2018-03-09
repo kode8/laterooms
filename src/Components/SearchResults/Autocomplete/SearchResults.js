@@ -9,9 +9,9 @@ const SearchResults = (props) => {
         { 
             props.searchData.map( (item, index) => {
                 let { Name } = item;
-                return (
-                    <li className="search-results__item" key={ index } > { Name } </li>
-                )
+                // return (
+                //    { <li className="search-results__item" key={ index } > { Name } </li> */ }
+                // )
             })
         }
         </ul>
