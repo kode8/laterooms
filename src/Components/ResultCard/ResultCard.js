@@ -7,7 +7,7 @@ const ResultCard = (props) => {
     return (
         <div className="result-card">
             <figure className="result-card__figure">
-                <img src="http://via.placeholder.com/350x150" alt={ Name } className="result-card__figure-img" />
+                <img src="http://via.placeholder.com/250x150" alt={ Name } className="result-card__figure-img" />
                 <figcaption  className="result-card__figure-caption">
                     <h2 className="result-card__figure-title">{ Name }</h2>
                     <ul className="result-card__figure-desc">
