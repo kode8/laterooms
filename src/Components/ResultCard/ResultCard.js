@@ -14,7 +14,7 @@ const ResultCard = (props) => {
                     <ul className="result-card__figure-desc">
                         <li className="result-card__figure-desc-rating" >
                             <span>{ StarRating } Star Rating</span>
-                            <ul className="result-card__figure-desc-stars" data-stars={ StarRating } aria-hidden="true" aria-role="presentation" >
+                            <ul className="result-card__figure-desc-stars" data-stars={ StarRating } aria-hidden="true" role="presentation" >
                                 <li></li>
                                 <li></li>
                                 <li></li>
