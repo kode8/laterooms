@@ -31,4 +31,4 @@ const SearchFilter = (props) => {
     );
 }
 
-export default SearchFilter;
+export default SearchFilter

@@ -19,4 +19,4 @@ const SearchResults = (props) => {
     );
 }
 
-export default SearchResults;
+export default SearchResults

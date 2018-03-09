@@ -50,4 +50,4 @@ class PageResults extends Component {
     }
 }
 
-export default PageResults;
+export default PageResults
