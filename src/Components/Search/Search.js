@@ -22,8 +22,8 @@ class Search extends Component {
   }
  
   render() {
-    
-    const focus = (this.state.value !== "") 
+
+    const focusClass = (this.state.value !== "") 
       ? 'search-component__form-control-input search-component__form-control-input--focus' 
       : 'search-component__form-control-input';
 
@@ -31,7 +31,7 @@ class Search extends Component {
       <div className="search-component">
         <form method="post" action="/fallback" className="search-component__form">
           <div className="search-component__form-control">
-            <input type="input" className={ focus } value={this.state.value} onChange={ this.handleChange } />
+            <input type="input" className={ focusClass } value={ this.state.value } onChange={ this.handleChange } id="search" />
             <label htmlFor="search" className="search-component__form-control-label">Search</label>
             <button type="submit" className="search-component__form-control-btn" value="search">Submit</button>
           </div>
