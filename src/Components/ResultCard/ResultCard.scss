@@ -13,9 +13,14 @@
         display: flex;
         flex-direction: row;
         margin: 15px;
+
+        .no-flex & {
+            // do fallbacks here, floats or similar
+        }
     }
 
     &__figure-title {
+        margin-top: 5px;
         color: $persian-indigo;
     }
 
@@ -52,15 +57,15 @@
         padding: 0;
     }
 
-    &__caption {
-        margin: 15px;
+    &__figure-caption {
+        padding: 0 15px;
     }
 
 }
 
 // Remove on dropping support */
 .lte-10 {
-    .result-results {
+    .result-card {
        // LTE10 tweaks here
     }
 }
