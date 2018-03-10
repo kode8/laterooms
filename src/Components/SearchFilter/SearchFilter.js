@@ -15,7 +15,8 @@ const SearchFilter = (props) => {
                    return(
                        
                         <li className="search-filter__item" key={ index }>
-                            <a className= { (props.filterSelected == name) ? "search-filter__link search-filter__link--active" : "search-filter__link" } onClick={ () => { props.onFilterChange(name) } } >
+                            <a className= { (props.filterSelected == name) ? "search-filter__link search-filter__link--active" : "search-filter__link" } 
+                               onClick={ () => { props.onFilterChange(name) } } >
                                 { name }
                             </a>
                         </li>
