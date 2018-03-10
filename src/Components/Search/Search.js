@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import SearchResults from 'Components/SearchResults/Autocomplete/SearchResults';
 
 // Assets
-import './Search.scss'
+import './Search.scss';
 
 class Search extends Component {
 

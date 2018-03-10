@@ -19,20 +19,26 @@
     }
 
     &__link {
+        text-transform: capitalize;
         border-radius: 5px;
         padding: 10px;
         background-color: darken($bright-sun, 10%);
         color: $white;
         text-decoration: none;
         transition: background-color .25s;
+        cursor: pointer;
 
         &--dimmed {
             background-color: grey;
             font-weight: normal;
         }
 
-        &:hover,
         &--active {
+            background-color: darken($persian-indigo, 5%);
+            cursor:  default;
+        }
+
+        &:hover {
             background-color: darken($persian-indigo, 5%);
         }
     }

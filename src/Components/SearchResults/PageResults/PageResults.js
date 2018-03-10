@@ -14,11 +14,24 @@ class PageResults extends Component {
 
       this.state = {
         searchData: props.searchData,
-        order: 'desc'
+        filterSelected: 'all'
       }
-      
+
       this.onOrderChange = this.onOrderChange.bind(this);
       this.onFilterChange = this.onFilterChange.bind(this);
+    }
+
+    fetchFilters() {
+        // return all facilities
+        const facilities = this.props.searchData.map((obj) => {
+            return obj.Facilities
+        });
+    
+        // flatten array
+        var flattenedFilters = [].concat.apply([], facilities);
+    
+        // reduce 
+        return [ ...new Set(flattenedFilters) ];
     }
 
     onFilterChange(filterCategory) {
@@ -32,7 +45,8 @@ class PageResults extends Component {
         } 
 
         this.setState({
-            searchData: filteredData
+            searchData: filteredData,
+            filterSelected: filterCategory
         })
     }
 
@@ -59,7 +73,10 @@ class PageResults extends Component {
     render() {
         return(
             <div>
-                <SearchFilter onFilterChange={ this.onFilterChange } onOrderChange={ this.onOrderChange } />
+                <SearchFilter onFilterChange={ this.onFilterChange } 
+                              onOrderChange={ this.onOrderChange } 
+                              filtersList={ this.fetchFilters() } 
+                              filterSelected={ this.state.filterSelected }  />
                 { 
                     this.state.searchData.map( (item, index) => {
                         return (
