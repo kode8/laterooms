@@ -53,6 +53,7 @@
     "build:prod": "NODE_ENV=production webpack -p",
     "serve": "NODE_ENV=development webpack-dev-server --mode development",
     "watch": "NODE_ENV=development webpack --watch --mode development",
+    "deploy": "npm run build:prod && surge -p ./dist --domain lrkata.surge.sh",
     "eslint": "eslint src"
   }
 }
