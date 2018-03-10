@@ -51,13 +51,13 @@
             text-transform: capitalize;
             transition: all .15s;
 
-            [data-focus='true'], 
+            &[data-focus='true'], 
             &:focus {
                 outline: none;
                 border-color: $persian-indigo;
             }
 
-            [data-focus='true'] ~ label,
+            &[data-focus='true'] ~ label,
             &:focus ~ label,  {
                 opacity: .8;
                 position: absolute;
