@@ -1,10 +1,11 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 // Components
-import SearchResults from 'Components/SearchResults/Autocomplete/SearchResults';
+import SearchResults from 'Components/SearchResults/Autocomplete/SearchResults'
 
 // Assets
-import './Search.scss';
+import './Search.scss'
 
 class Search extends Component {
 
@@ -49,5 +50,9 @@ class Search extends Component {
     );
   }
 }
+
+Search.propTypes = {
+  searchData: PropTypes.array
+};
 
 export default Search

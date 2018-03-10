@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 // Components
 import ResultCard from 'Components/ResultCard/ResultCard'
@@ -88,5 +89,9 @@ class PageResults extends Component {
         )
     }
 }
+
+PageResults.propTypes = {
+    searchData: PropTypes.array
+};
 
 export default PageResults

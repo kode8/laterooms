@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 // Assets
 import './SearchFilter.scss'
@@ -37,5 +38,12 @@ const SearchFilter = (props) => {
         </ul>
     );
 }
+
+SearchFilter.propTypes = {
+    onFilterChange: PropTypes.func,
+    onOrderChange: PropTypes.func,
+    filtersList: PropTypes.array,
+    filterSelected: PropTypes.string
+};
 
 export default SearchFilter
