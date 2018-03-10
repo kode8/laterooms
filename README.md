@@ -5,6 +5,7 @@
 3. I replaced most of build with my own webpack config, it contains postCSS plugins and a bunch of other stuff I find helpful 
 4. I've not done a lot of React, apart from my own site http://johncarroll.surge.sh and this, that's about it
 5. Hasn't been tested apart from Chrome
+6. Live version http://lrkata.surge.sh/
 
 # Install 
 
