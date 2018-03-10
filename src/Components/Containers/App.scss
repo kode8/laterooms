@@ -5,7 +5,9 @@
     margin: 20px;
 
     @include medium {
-        margin: 0 auto;
+        margin:0 auto;
+        margin-left: 20px;
+        margin-right: 20px;
     }
 }
 
