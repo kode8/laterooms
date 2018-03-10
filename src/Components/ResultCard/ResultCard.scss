@@ -1,22 +1,42 @@
 @import 'colors';
+@import 'mixins/media';
 
 .result-card {
 
     $block: &;
-    display: flex;
+    display: block;
     width: 100%;
     border: 1px solid $persian-indigo; 
     border-radius: 5px;
     margin: 20px auto;
 
-    &__figure {
+    @include medium {
         display: flex;
-        flex-direction: row;
+    }
+
+    &__figure {
+        display: block;
         flex-grow: 1;
         margin: 15px;
 
-        .no-flex & {
-            // do fallbacks here, floats or similar
+        @include medium {
+            display: flex;
+            flex-direction: row;
+
+            .no-flex & {
+                // do fallbacks here, floats or similar
+            }
+        }
+
+    }
+
+    &__figure-img {
+        width: 100%;
+        border-radius: 5px;
+
+        @include medium {
+            max-height: 150px;
+            max-width: 250px;
         }
     }
 
@@ -52,14 +72,18 @@
         }
     }
 
-    &__figure--rating {
+    &__figure-desc-rating {
         list-style: none;
         margin: 0;
         padding: 0;
     }
 
     &__figure-caption {
-        padding: 0 15px;
+        margin: 10px;
+
+        @include medium {
+            margin: 0 20px;
+        }
     }
 
 }
